@@ -8,10 +8,12 @@ import { HomeModule } from './home/home.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { PropertiesModule } from './properties/properties.module';
+import { ContactModule } from './contact/contact.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-	imports: [BrowserModule, AppRoutingModule, AbenwoodTopNavbarModule, HomeModule, SharedModule, PropertiesModule],
+	imports: [BrowserModule, AppRoutingModule, AbenwoodTopNavbarModule, HomeModule, SharedModule, PropertiesModule, ContactModule, AboutModule],
   providers: [],
   bootstrap: [AppComponent],
 })
