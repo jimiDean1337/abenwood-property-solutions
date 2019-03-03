@@ -1,0 +1,138 @@
+<section>
+  <owl-carousel
+    #heroOwl
+    [carouselClasses]="['owl-theme', 'home-slider', 'owl-carousel']"
+    [options]="heroOptions"
+  >
+    <div class="item" *ngFor="let image of heroImages; let i = index">
+      <div class="slider-item" [style.background-image]="'url(' + image + ')'">
+        <div class="overlay"></div>
+        <div class="container">
+          <div
+            class="row no-gutters slider-text align-items-md-end align-items-center justify-content-end"
+          >
+            <div class="col-md-6 text p-4 abenwood-animate fadeInUp animated">
+              <h1 class="mb-3">Florida 5, Pinecrest, FL</h1>
+              <span class="location d-block mb-3"
+                ><i class="icon-my_location"></i> Melbourne, Vic 3004</span
+              >
+              <p>
+                A small river named Duden flows by their place and supplies it with the necessary
+                regelialia. It is a paradisematic country, in which roasted parts of sentences fly
+                into your mouth.
+              </p>
+              <span class="price">$28,000</span>
+              <a href="#" class="btn-custom p-3 px-4 bg-primary"
+                >View Details <span class="icon-plus ml-1"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </owl-carousel>
+</section>
+<section class="abenwood-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch" data-aos="fade-in" data-aos-delay="0">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="fi flaticon-pin"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Find Places Anywhere In Ohio</h3>
+                <p>Deserunt non aute in nulla consequat officia cillum ad mollit labore in ut duis pariatur pariatur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch" data-aos="fade-in" data-aos-delay="100">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="fi flaticon-detective"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">We Have 40 Years Experience</h3>
+                <p>Deserunt non aute in nulla consequat officia cillum ad mollit labore in ut duis pariatur pariatur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-sel Searchf-stretch" data-aos="fade-in" data-aos-delay="200">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="fi flaticon-house"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Buy &amp; Rent Modern Properties</h3>
+                <p>Deserunt non aute in nulla consequat officia cillum ad mollit labore in ut duis pariatur pariatur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch" data-aos="fade-in" data-aos-delay="300">
+            <div class="media block-6 services py-4 d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="fi flaticon-purse"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Making Money</h3>
+                <p>Deserunt non aute in nulla consequat officia cillum ad mollit labore in ut duis pariatur pariatur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="abenwood-section abenwood-properties">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center" data-aos="fade-up" data-aos-once="true" data-aos-delay="0">
+        <span class="subheading">Recent Posts</span>
+        <h2 class="mb-4">Recent Properties</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <owl-carousel #propertiesOwl [carouselClasses]="['owl-theme', 'properties-slider', 'owl-carousel']"
+         [options]="propertyOptions"
+          data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+          <div class="item" *ngFor="let prop of propertyImages; let i = index">
+            <div class="properties">
+              <a href="#" class="img d-flex justify-content-center align-items-center" [style.background-image]="'url(' + prop + ')'">
+                <div class="icon d-flex justify-content-center align-items-center">
+                  <span class="icon-search2"></span>
+                </div>
+              </a>
+              <div class="text p-3">
+                <span class="status sale">Sale</span>
+                <div class="d-flex">
+                  <div class="one">
+                    <h3><a href="#">North Parchmore Street</a></h3>
+                    <p>Apartment</p>
+                  </div>
+                  <div class="two">
+                    <span class="price">$20,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </owl-carousel>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="abenwood-seperator"></div>
+<section class="abenwood-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white" data-aos="fade-in">
+              <h2>Subcribe to our Newsletter</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

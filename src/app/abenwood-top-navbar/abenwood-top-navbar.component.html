@@ -1,0 +1,51 @@
+<div class="top">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col">
+        <p class="social d-flex">
+          <a href="https://www.facebook.com/abenwood/"><span class="icon-facebook"></span></a>
+          <a href="#"><span class="icon-twitter"></span></a>
+          <a href="#"><span class="icon-google"></span></a>
+          <a href="#"><span class="icon-pinterest"></span></a>
+        </p>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <p class="num"><span class="icon-phone"></span> +1 740 274 9217</p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav
+  class="navbar navbar-expand-lg navbar-dark abenwood_navbar bg-dark abenwood-navbar-light"
+  id="abenwood-navbar"
+>
+  <div class="container">
+    <a class="navbar-brand" href="http://abenwoodpropertysolutions.com/"><img src="assets/images/logo_A.jpg" alt="Abenwood Logo" width="30">benwood <span>Property</span> Solutions</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed"
+           aria-controls="collapseNavbar"
+    >
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div id="collapseNavbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/property" class="nav-link">Property</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        <!-- <li class="nav-item cta">
+          <a href="/contact" class="nav-link ml-lg-2"><span class="icon-user"></span> Sign-In</a>
+        </li>
+        <li class="nav-item cta cta-colored">
+          <a href="/contact" class="nav-link"><span class="icon-pencil"></span> Sign-Up</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END nav -->
