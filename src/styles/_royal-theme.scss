@@ -1,5 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap/scss/variables';
+@import '~hover.css/scss/hover';
+@import '~hover.css/scss/options';
 @import 'icomoon';
 @import 'openiconic';
 @import 'flat-icon';
@@ -305,6 +307,9 @@ h1, h2, h3, h4, h5,
 
 		.navbar-brand {
 			color: $black;
+			span {
+				color: darker($secondary, 20%);
+			}
 		}
 	}
 

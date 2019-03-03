@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
 		'assets/images/properties-8.jpg',
 	];
   ngOnInit() {
+		this.propertyImages.map((prop, i) => this.staggerItem(i));
   }
 
   staggerItem(index: number) {

@@ -34,11 +34,11 @@
 
     <div id="collapseNavbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/property" class="nav-link">Property</a></li>
-        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+        <li class="nav-item active hvr-underline-from-left"><button (click)="navigateTo('home')" class="nav-link btn btn-link">Home</button></li>
+        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('properties')" class="nav-link btn btn-link">Property</button></li>
+        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('about')" class="nav-link btn btn-link">About</button></li>
+        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('blog')" class="nav-link btn btn-link">Blog</button></li>
+        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('contact')" class="nav-link btn btn-link">Contact</button></li>
         <!-- <li class="nav-item cta">
           <a href="/contact" class="nav-link ml-lg-2"><span class="icon-user"></span> Sign-In</a>
         </li>

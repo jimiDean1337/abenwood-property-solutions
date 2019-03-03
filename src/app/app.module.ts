@@ -10,10 +10,11 @@ import { SharedModule } from './shared/shared.module';
 import { PropertiesModule } from './properties/properties.module';
 import { ContactModule } from './contact/contact.module';
 import { AboutModule } from './about/about.module';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-	imports: [BrowserModule, AppRoutingModule, AbenwoodTopNavbarModule, HomeModule, SharedModule, PropertiesModule, ContactModule, AboutModule],
+	imports: [BrowserModule, AppRoutingModule, AbenwoodTopNavbarModule, HomeModule, SharedModule, PropertiesModule, ContactModule, AboutModule, BlogModule],
   providers: [],
   bootstrap: [AppComponent],
 })

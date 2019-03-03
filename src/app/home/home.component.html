@@ -87,7 +87,7 @@
         <owl-carousel #propertiesOwl [carouselClasses]="['owl-theme', 'properties-slider', 'owl-carousel']"
          [options]="propertyOptions">
           <div class="item" *ngFor="let prop of propertyImages; let i = index">
-            <div class="properties" data-aos="fade-down" [style.animation-duration]="staggerItem(i)">
+            <div class="properties" data-aos="fade-down">
               <a href="#" class="img d-flex justify-content-center align-items-center" [style.background-image]="'url(' + prop + ')'">
                 <div class="icon d-flex justify-content-center align-items-center">
                   <span class="icon-search2"></span>

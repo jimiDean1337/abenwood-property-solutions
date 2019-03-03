@@ -1,4 +1,4 @@
-<app-abenwood-top-navbar></app-abenwood-top-navbar>
+<app-abenwood-top-navbar (locationChanged)="navigateTo($event)"></app-abenwood-top-navbar>
 
 
 <router-outlet></router-outlet>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center" data-aos="flip-down">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by JFlynnDesigns <img src="assets/images/icons/jfd_logo.png" alt="JFlynn Designs Logo" width="50" style="border-radius: 50%;"></p>

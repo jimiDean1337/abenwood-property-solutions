@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import { PropertiesRoutingModule } from './properties-routing.module';
 import { PropertiesComponent } from './properties.component';
@@ -7,7 +7,7 @@ import { PropertiesComponent } from './properties.component';
 @NgModule({
   declarations: [PropertiesComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     PropertiesRoutingModule
   ]
 })

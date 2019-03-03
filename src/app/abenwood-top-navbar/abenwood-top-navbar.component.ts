@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-abenwood-top-navbar',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./abenwood-top-navbar.component.scss']
 })
 export class AbenwoodTopNavbarComponent implements OnInit {
+	@Output('locationChanged') onNavigation = new EventEmitter<any>();
   isCollapsed = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  navigateTo(url: string) {
+  	return this.onNavigation.emit({url: url})
   }
 
 }
