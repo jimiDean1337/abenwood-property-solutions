@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import * as AOS from 'aos';
 import * as $ from 'Jquery';
 
@@ -8,6 +8,7 @@ import * as $ from 'Jquery';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+	@HostListener('document:loading') onLoad(event) { console.log(event); };
 	title = 'Abenwood Property Solutions | Buy Ohio Real Estate at Wholesale Prices';
 
 	ngOnInit() {
@@ -15,6 +16,10 @@ export class AppComponent implements OnInit {
 		 	duration: 800,
 		 	easing: 'slide'
  		});
+		console.log('aos', AOS);
+	}
 
+	scrollingUp(triggerPos: number, pos = null) {
+		console.log('scrollingUp()', triggerPos, pos)
 	}
 }
