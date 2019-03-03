@@ -8,7 +8,7 @@ $font-primary: 'Open Sans',Arial, sans-serif;
 
 $white: #fff;
 $black: #000000;
-// $darken: #3a4348;
+$darken: #3a4348;
 
 $primary: #26baee;
 $secondary: #f05d23;
@@ -32,7 +32,7 @@ $quarternary: #ff8f56;
 }
 
 html {
-	// overflow-x: hidden;
+	overflow-x: hidden;
 }
 body {
 	font-family: $font-primary;
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5,
 				}
 			}
 			&.active {
-				// background: $quarternary;
+				background: $quarternary;
 				// background: $primary;
 				> a {
 					color: rgba(255,255,255,1);
