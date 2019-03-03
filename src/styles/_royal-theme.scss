@@ -10,10 +10,10 @@ $white: #fff;
 $black: #000000;
 $darken: #3a4348;
 
-$primary: #26baee;
-$secondary: #f05d23;
+$primary: #9e130e;
+$secondary: #0e519e;
 $tertiary: #252a2b;
-$quarternary: #ff8f56;
+$quarternary: #0e9e5b;
 
 
 @mixin border-radius($radius) {
@@ -53,7 +53,7 @@ a {
 	color: $primary;
 	&:hover {
 		text-decoration: none;
-		color: $primary;
+		color: $quarternary;
 	}
 }
 h1, h2, h3, h4, h5,
@@ -74,10 +74,13 @@ h1, h2, h3, h4, h5,
 		margin-bottom: 0;
 		a{
 			padding: 10px 18px;
-			border-left: 1px solid lighten($tertiary,4%);
+			// border-left: 1px solid lighten($tertiary,4%);
 			color: lighten($tertiary,20%);
+			&:hover {
+				color: lighten($secondary, 20%);
+			}
 			&:last-child{
-				border-right: 1px solid lighten($tertiary,4%);
+				// border-right: 1px solid lighten($tertiary,4%);
 			}
 			@include media-breakpoint-down(sm){
 				padding: 10px 10px;
@@ -91,8 +94,8 @@ h1, h2, h3, h4, h5,
 		display: inline-block;
 	}
 }
-.abenwood-navbar-transparent {
-  background: transparent !important;
+.abenwood-navbar-dark {
+  background: lighten($darken,0%) !important;
 	// position: absolute;
 	// top: 20px;
 	// left: 0;
@@ -108,10 +111,10 @@ h1, h2, h3, h4, h5,
 }
 .abenwood-navbar-light {
 	background: darken($tertiary,0%) !important;
-	// position: absolute;
-	// top: 20px;
-	// left: 0;
-	// right: 0;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
 	z-index: 3;
 	padding: 0;
 	@include media-breakpoint-down(md) {
@@ -190,7 +193,7 @@ h1, h2, h3, h4, h5,
 						}
 					}
 					&:hover{
-						// background: $primary;
+						background: $primary;
 						color: $white;
 					}
 					@include media-breakpoint-down(sm){
@@ -199,7 +202,7 @@ h1, h2, h3, h4, h5,
 					}
 				}
 				&.cta-colored {
-					> a{
+					> a {
 						background: $quarternary !important;
 					}
 				}
@@ -224,12 +227,11 @@ h1, h2, h3, h4, h5,
 		letter-spacing: .1em;
 	}
 
-	&.scrolled  {
+	&.aos-animate  {
 		position: fixed;
 		right: 0;
 		left: 0;
 		top: 0;
-		margin-top: -130px;
 		background: $white!important;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
 		.nav-item {
@@ -305,7 +307,9 @@ h1, h2, h3, h4, h5,
 			color: $black;
 		}
 	}
+
 }
+
 
 .navbar-brand {
 	font-weight:400;
