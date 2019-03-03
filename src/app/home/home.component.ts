@@ -69,8 +69,13 @@ export class HomeComponent implements OnInit {
 		'assets/images/properties-8.jpg',
 	];
   ngOnInit() {
-		console.log('owl home', this.heroOwl);
-		console.log('owl props', this.propertiesOwl);
+  }
+
+  staggerItem(index: number) {
+		const num = index * 50;
+		const props = document.body.querySelectorAll('.properties');
+		return props[index].setAttribute('data-aos-delay', `${num}`);
+
   }
 
 }
