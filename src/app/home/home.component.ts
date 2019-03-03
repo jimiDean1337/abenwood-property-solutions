@@ -55,18 +55,18 @@ export class HomeComponent implements OnInit {
 	};
   constructor() { }
   heroImages = [
-		'../assets/images/bg_1.jpg',
-		'../assets/images/bg_2.jpg',
+		'assets/images/bg_1.jpg',
+		'assets/images/bg_2.jpg',
   ];
 	propertyImages = [
-		'../assets/images/properties-1.jpg',
-		'../assets/images/properties-2.jpg',
-		'../assets/images/properties-3.jpg',
-		'../assets/images/properties-4.jpg',
-		'../assets/images/properties-5.jpg',
-		'../assets/images/properties-6.jpg',
-		'../assets/images/properties-7.jpg',
-		'../assets/images/properties-8.jpg',
+		'assets/images/properties-1.jpg',
+		'assets/images/properties-2.jpg',
+		'assets/images/properties-3.jpg',
+		'assets/images/properties-4.jpg',
+		'assets/images/properties-5.jpg',
+		'assets/images/properties-6.jpg',
+		'assets/images/properties-7.jpg',
+		'assets/images/properties-8.jpg',
 	];
   ngOnInit() {
 		console.log('owl home', this.heroOwl);
