@@ -7,14 +7,26 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 export class AbenwoodTopNavbarComponent implements OnInit {
 	@Output('locationChanged') onNavigation = new EventEmitter<any>();
-  isCollapsed = false;
+  isCollapsed: boolean;
+  active = 'home';
   constructor() { }
 
   ngOnInit() {
+    this.isCollapsed = false;
+  }
+
+  isActive(name) {
+		return this.active === name ? 'active' : '';
   }
 
   navigateTo(url: string) {
+		this.active = url;
+    this.isCollapsed = true;
   	return this.onNavigation.emit({url: url})
+  }
+
+  toggleNavbarCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }

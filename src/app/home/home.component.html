@@ -1,30 +1,35 @@
-<section>
+<section class="">
   <owl-carousel
     #heroOwl
     [carouselClasses]="['owl-theme', 'home-slider', 'owl-carousel']"
     [options]="heroOptions"
   >
-    <div class="item" *ngFor="let image of heroImages; let i = index">
-      <div class="slider-item" [style.background-image]="'url(' + image + ')'">
+    <div class="item" *ngFor="let image of heroImages; let i = index;">
+      <div class="slider-item" [style.background-image]="'url(' + image.url + ')'">
         <div class="overlay"></div>
-        <div class="container">
+        <div class="container-fluid">
           <div
-            class="row no-gutters slider-text align-items-md-end align-items-center justify-content-end"
+            class="row no-gutters slider-text justify-content-around"
           >
-            <div class="col-md-6 text p-4 abenwood-animate fadeInUp animated" data-aos="fade-up" data-aos-delay="50">
-              <h1 class="mb-3">123 Main Street</h1>
+            <div class="col-sm-12">
+                <button class="btn btn-custom p-3 px-4 bg-primary animated" (click)="image.toggleDetails()" [ngClass]="(image.showDetails === 'fadeOutUp') ? 'fadeInRight':'fadeOutRight'"
+                  >View Details <span class="icon-plus ml-1"></span
+                ></button>
+            </div>
+            <div class="col-sm-12 text p-5 px-4 animated" [ngClass]="image.showDetails">
+              <div class="text-right mt-lg-4">
+                <button class="btn btn-sm animated" (click)="image.toggleDetails()">
+                  <span class="icon-close px-4"></span>
+                </button>
+              </div>
+              <h1 class="mb-3">{{image.data?.address?.street}}</h1>
               <span class="location d-block mb-3"
-                ><i class="icon-my_location"></i>Alexandria, Ohio, USA 43001</span
+                ><i class="icon-my_location"></i>{{image.data?.address?.location}}</span
               >
               <p>
-                A small river named Duden flows by their place and supplies it with the necessary
-                regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-                into your mouth.
+                {{image.data?.caption}}
               </p>
-              <span class="price">$28,000</span>
-              <a href="#" class="btn-custom p-3 px-4 bg-primary"
-                >View Details <span class="icon-plus ml-1"></span
-              ></a>
+              <span class="price">{{image.data?.price}}</span>
             </div>
           </div>
         </div>
@@ -34,6 +39,11 @@
 </section>
 <section class="abenwood-section bg-light">
       <div class="container">
+        <div class="row d-flex">
+          <div class="col-12 text-center align-tems-center" data-aos="fade-up">
+            <h1 id="home_about" class="text-gray-dark card-text text-uppercase p-2 px-2">How We're Better</h1>
+          </div>
+        </div>
         <div class="row d-flex">
           <div class="col-md-3 d-flex align-self-stretch" data-aos="fade-up" data-aos-delay="0">
             <div class="media block-6 services py-4 d-block text-center">
@@ -87,7 +97,7 @@
         <owl-carousel #propertiesOwl [carouselClasses]="['owl-theme', 'properties-slider', 'owl-carousel']"
          [options]="propertyOptions">
           <div class="item" *ngFor="let prop of propertyImages; let i = index">
-            <div class="properties" data-aos="fade-down">
+            <div class="properties" data-aos="fade-up" data-aos-offset="200px">
               <a href="#" class="img d-flex justify-content-center align-items-center" [style.background-image]="'url(' + prop + ')'">
                 <div class="icon d-flex justify-content-center align-items-center">
                   <span class="icon-search2"></span>

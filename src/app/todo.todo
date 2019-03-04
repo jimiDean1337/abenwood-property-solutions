@@ -1,0 +1,42 @@
+Navigation:
+  ❑ fix broken links @high
+  ❑ scroll to top button
+
+Navbar:
+  ❑ toggle closes on screen resize @high
+  ❑ aos breakpoints to change scrolled trigger offset @high
+  ❑ link text darker color
+
+Components:
+  HighLevel(parent):
+    ❑ Auth @high
+    ❑ Search @high
+    ❑ Google Maps @high
+    ❑ Tags
+    ✔ Home @done (19-03-03 21:25)
+    ✔ Properties @done (19-03-03 21:25)
+    ✔ Blog @done (19-03-03 21:24)
+    ✔ About @done (19-03-03 21:25)
+    ✔ Contact @done (19-03-03 21:25)
+    ✔ Page-not-found @done (19-03-03 21:26)
+
+  LowLevel(child):
+    Property:
+      ❑ PropertyList
+      ❑ PropertyDetails
+      ❑ AddProperty
+      ❑ EditProperty
+
+    Blog:
+      ❑ BlogList
+      ❑ BlogDetails
+      ❑ AddBlog
+      ❑ EditBlog
+
+    Contact:
+      ❑ ContactForm
+      ❑ ContactMap
+
+Misc:
+  ❑ toggle home cta on screen resize
+  ❑

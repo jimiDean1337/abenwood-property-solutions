@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
 		items: 1,
 		margin: 0,
 		stagePadding: 0,
-		nav: true,
+		navigation: true,
 		dots: true,
 		navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 		responsive: {

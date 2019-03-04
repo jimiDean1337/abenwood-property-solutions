@@ -18,14 +18,14 @@
 <nav
   class="navbar navbar-expand-lg navbar-dark abenwood_navbar bg-dark abenwood-navbar-light"
   id="abenwood-navbar"
-  data-aos="nav-scrolled" data-aos-offset="760" data-aos-duration="500" data-aos-mirror="true"
+  data-aos="nav-scrolled" data-aos-offset="850" data-aos-mirror="true"
 >
   <div class="container">
-    <a class="navbar-brand" href="http://abenwoodpropertysolutions.com/"><img src="assets/images/logo_A.jpg" alt="Abenwood Logo" width="30" style="border-radius: 4px;">benwood <span>Property</span> Solutions</a>
+    <a class="navbar-brand"><img class="img-thumbnail" src="assets/images/logo_A.jpg" alt="Abenwood Logo" width="30">benwood <span>Property</span> Solutions</a>
     <button
       class="navbar-toggler"
       type="button"
-      (click)="isCollapsed = !isCollapsed"
+      (click)="toggleNavbarCollapse()"
           [attr.aria-expanded]="!isCollapsed"
            aria-controls="collapseNavbar"
     >
@@ -34,11 +34,11 @@
 
     <div id="collapseNavbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active hvr-underline-from-left"><button (click)="navigateTo('home')" class="nav-link btn btn-link">Home</button></li>
-        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('properties')" class="nav-link btn btn-link">Property</button></li>
-        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('about')" class="nav-link btn btn-link">About</button></li>
-        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('blog')" class="nav-link btn btn-link">Blog</button></li>
-        <li class="nav-item hvr-underline-from-left"><button (click)="navigateTo('contact')" class="nav-link btn btn-link">Contact</button></li>
+        <li class="nav-item hvr-underline-from-left" [ngClass]="isActive('home')"><button (click)="navigateTo('home')" class="nav-link btn btn-link">Home</button></li>
+        <li class="nav-item hvr-underline-from-left" [ngClass]="isActive('properties')"><button (click)="navigateTo('properties')" class="nav-link btn btn-link">Property</button></li>
+        <li class="nav-item hvr-underline-from-left" [ngClass]="isActive('about')"><button (click)="navigateTo('about')" class="nav-link btn btn-link">About</button></li>
+        <li class="nav-item hvr-underline-from-left" [ngClass]="isActive('blog')"><button (click)="navigateTo('blog')" class="nav-link btn btn-link">Blog</button></li>
+        <li class="nav-item hvr-underline-from-left" [ngClass]="isActive('contact')"><button (click)="navigateTo('contact')" class="nav-link btn btn-link">Contact</button></li>
         <!-- <li class="nav-item cta">
           <a href="/contact" class="nav-link ml-lg-2"><span class="icon-user"></span> Sign-In</a>
         </li>

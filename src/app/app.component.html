@@ -1,7 +1,9 @@
 <app-abenwood-top-navbar (locationChanged)="navigateTo($event)"></app-abenwood-top-navbar>
 
+<main>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</main>
 
 <footer class="abenwood-footer abenwood-bg-dark abenwood-section">
       <div class="container">
@@ -56,13 +58,14 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center" data-aos="flip-down">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by JFlynnDesigns <img src="assets/images/icons/jfd_logo.png" alt="JFlynn Designs Logo" width="50" style="border-radius: 50%;"></p>
+            <p>
+  Copyright &copy; 2019 AbenwoodPropertySolutions | All rights reserved <br /> Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by JFlynnDesigns <img src="assets/images/icons/jfd_logo.png" alt="JFlynn Designs Logo" width="50" style="border-radius: 50%;"></p>
           </div>
         </div>
       </div>
     </footer>
-
+  <button class="back-to-top btn btn-primary hvr-icon-up" data-aos="fadeInUp" data-aos-offset="670" style="position: fixed; z-index: 9999;bottom: 64px; right: 64px; width: 50px; height: 50px;color: #0e9e5b; border-radius: 50%; text-align: center;" (click)="scrollToTop()">
+    <span class="icon icon-arrow-up text-lg-center hvr-icon"></span>
+  </button>
     <!-- loader -->
-  <!-- <div id="abenwood-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+  <div id="abenwood-loader" [ngClass]="(loading | async) ? 'show':''" class=""><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
