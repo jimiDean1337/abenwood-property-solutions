@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.loading = new Observable(observer => {
-				observer.next(true);
+		this.loading = new Observable(obs => {
+			obs.next(true);
 			setTimeout(() => {
-				observer.next(false);
+				obs.next(false);
 			}, 1500);
-		})
+		});
 		AOS.init({
 			animatedClassName: 'animated',
 		 	duration: 800,
@@ -31,13 +31,14 @@ export class AppComponent implements OnInit {
 	}
 
 	navigateTo(event) {
-		this.loading = new Observable(observer => {
-			observer.next(true);
-			setTimeout(() => {
-				this.router.navigate([event.url], { relativeTo: this.route });
-				observer.next(false);
-			}, 1500);
-		})
+		this.loading = new Observable(obs => {
+			obs.next(true);
+					setTimeout(() => {
+						this.router.navigate([event.url], { relativeTo: this.route });
+						obs.next(false);
+					}, 1500);
+			})
+
 	}
 
 	scrollToTop() {

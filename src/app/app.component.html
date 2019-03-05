@@ -1,4 +1,4 @@
-<app-abenwood-top-navbar (locationChanged)="navigateTo($event)"></app-abenwood-top-navbar>
+<app-abenwood-top-navbar id="top-navbar" (locationChanged)="navigateTo($event)"></app-abenwood-top-navbar>
 
 <main>
 
@@ -68,4 +68,4 @@
     <span class="icon icon-arrow-up text-lg-center hvr-icon"></span>
   </button>
     <!-- loader -->
-  <div id="abenwood-loader" [ngClass]="(loading | async) ? 'show':''" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#9e130e"/></svg></div>
+  <div id="abenwood-loader" [ngClass]="(loading | async) ? 'show' : 'hide'" class="animated slow fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#9e130e"/></svg></div>
