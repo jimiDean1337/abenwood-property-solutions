@@ -12,7 +12,7 @@ export class AbenwoodTopNavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.isCollapsed = false;
+    this.isCollapsed = true;
   }
 
   isActive(name) {

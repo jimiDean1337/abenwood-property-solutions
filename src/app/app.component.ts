@@ -34,16 +34,17 @@ export class AppComponent implements OnInit {
 		this.loading = new Observable(obs => {
 			obs.next(true);
 					setTimeout(() => {
+						this.scrollToTop();
 						this.router.navigate([event.url], { relativeTo: this.route });
 						obs.next(false);
 					}, 1500);
 			})
-
 	}
 
 	scrollToTop() {
-		document.body.scrollTop = 0;
-
+		setTimeout(() => {
+			window.scrollTo(0, 0);
+		}, 500);
 	}
 
 }

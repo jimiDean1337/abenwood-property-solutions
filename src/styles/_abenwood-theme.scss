@@ -677,6 +677,17 @@ h1, h2, h3, h4, h5,
 	}
 }
 
+.btn-to-top {
+	position: fixed;
+	z-index: 9999;
+	bottom: 0;
+	right: 32px;
+	color: #fefefe;
+	text-align: center;
+	height: 60px;
+	width: 50px;
+}
+
 
 
 .abenwood-search{
