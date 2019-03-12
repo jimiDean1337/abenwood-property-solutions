@@ -7,8 +7,8 @@
 @import 'animate';
 $font-primary: 'Open Sans',Arial, sans-serif;
 
-$white: #efefef;
-$black: #303030;
+$white: white;
+$black: black;
 $darken: #3a4348;
 $primary: #9e130e;
 $secondary: #0e519e;
@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5,
 .top{
 	background: darken($tertiary,0%) !important;
 	border-bottom: 1px solid lighten($tertiary,4%);
+
 	p.social{
 		margin-bottom: 0;
 		a{
@@ -124,9 +125,28 @@ h1, h2, h3, h4, h5,
 	}
 
 	.navbar-brand {
-		color: $white;
-		font-size: .9em;
-		border-bottom: 2px solid $primary;
+		align-items: center;
+		&.logo-text {
+			opacity: 1;
+			color: $white;
+			font-size: .9em;
+			border-bottom: 2px solid $primary;
+			@include transition(.3s);
+			@include media-breakpoint-down(sm) {
+				opacity: 0;
+			}
+			@include media-breakpoint-down(md) {
+				border-bottom: none;
+			}
+			@include hover() {
+				opacity: 1;
+			}
+		}
+		&.logo-img {
+			line-height: 1.5;
+			border-bottom: none;
+			margin-right: 0;
+		}
 
 	}
 
@@ -141,11 +161,12 @@ h1, h2, h3, h4, h5,
 				padding-bottom: 1.5rem;
 				padding-left: 20px;
 				padding-right: 20px;
-				color: lighten($tertiary,30%);
+				color: lighten($tertiary,60%);
 				font-weight: 400;
-				&:hover {
+				@include hover() {
 					color: $white;
 				}
+
 				opacity: 1!important;
 				@include media-breakpoint-down(md){
 					padding-left: 0;
@@ -211,9 +232,9 @@ h1, h2, h3, h4, h5,
 			}
 			&.active {
 				// background: $quarternary;
-				background: $primary;
-				border-bottom: 4px solid $quarternary;
-				> a {
+				background: lighten($primary, 15%);
+				border-bottom: 2px solid $quarternary;
+				> a, .btn-link {
 					color: rgba(255,255,255,1);
 				}
 			}
@@ -221,14 +242,14 @@ h1, h2, h3, h4, h5,
 	}
 
 	.navbar-toggler {
-		border: none;
+		border: none !important;
 		color: rgba(255,255,255,.5)!important;
 		cursor: pointer;
-		padding-right: 0;
+		padding-left: 3rem;
+		padding-right: 3rem;
 		text-transform: uppercase;
 		font-size: 16px;
 		letter-spacing: .1em;
-
 	}
 
 	&.aos-animate  {
@@ -266,9 +287,9 @@ h1, h2, h3, h4, h5,
 		.navbar-nav {
 			@include media-breakpoint-down(md) {
 				background: none;
-				border-radius: 0px;
-				padding-left: 0rem!important;
-				padding-right: 0rem!important;
+				border-radius: 0;
+				padding-left: 0!important;
+				padding-right: 0!important;
 			}
 		}
 
@@ -279,17 +300,18 @@ h1, h2, h3, h4, h5,
 				padding-right: 0!important;
 			}
 		}
-
 		.navbar-toggler {
-			border: none;
+			border: none !important;
 			color: rgba(0,0,0,.5)!important;
 			border-color: rgba(0,0,0,.5)!important;
 			cursor: pointer;
-			padding-right: 0;
+			padding-right: 3rem;
 			text-transform: uppercase;
 			font-size: 16px;
 			letter-spacing: .1em;
-
+			&:focus {
+				border: none !important;
+			}
 		}
 		.nav-link {
 			padding-top: .9rem!important;
@@ -323,6 +345,7 @@ h1, h2, h3, h4, h5,
 	font-size: 20px;
 	text-transform: uppercase;
 	span{
+
 		font-weight: 700;
 	}
 }
@@ -486,6 +509,9 @@ h1, h2, h3, h4, h5,
 					position: relative !important;
 					z-index: 0;
 					color: rgba(0,0,0,.6);
+					&.border-bottom-primary {
+						border-bottom: 2px solid $primary;
+					}
 				}
 				h1 {
 					font-size: 24px;
@@ -636,6 +662,7 @@ h1, h2, h3, h4, h5,
 
 
 //BUTTON
+
 .btn {
 	cursor: pointer;
 	@include border-radius(30px);
@@ -885,8 +912,11 @@ h1, h2, h3, h4, h5,
 		margin-bottom: 30px;
 	}
 	.img{
+		cursor: pointer;
 		display: block;
 		height: 250px;
+		@include prefixed(transition-duration, 1s);
+		@include prefixed(transition-easing, 'ease-out');
 	}
 	.icon{
 		width: 60px;
