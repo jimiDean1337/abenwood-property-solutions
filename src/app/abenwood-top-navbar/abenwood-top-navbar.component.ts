@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-
+import { Observable, BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-abenwood-top-navbar',
   templateUrl: './abenwood-top-navbar.component.html',
@@ -7,12 +8,13 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 export class AbenwoodTopNavbarComponent implements OnInit {
 	@Output('locationChanged') onNavigation = new EventEmitter<any>();
-  isCollapsed: boolean;
+  isCollapsed: BehaviorSubject<boolean>;
   active = 'home';
-  constructor() { }
+  constructor() {
+    this.isCollapsed = new BehaviorSubject(true);
+  }
 
   ngOnInit() {
-    this.isCollapsed = true;
   }
 
   isActive(name) {
@@ -21,12 +23,13 @@ export class AbenwoodTopNavbarComponent implements OnInit {
 
   navigateTo(url: string) {
 		this.active = url;
-    this.isCollapsed = true;
+    this.isCollapsed.next(true);
   	return this.onNavigation.emit({url: url})
   }
 
   toggleNavbarCollapse() {
-    this.isCollapsed = !this.isCollapsed;
+    let isCollapsed = this.isCollapsed.getValue();
+    this.isCollapsed.next(!isCollapsed);
   }
 
 }
