@@ -1,10 +1,9 @@
 <section class="abenwood-section bg-light">
     	<div class="container">
     		<div class="row">
-
     			<div class="col-md-4" *ngFor="let property of list">
-    				<div class="properties">
-    					<div (click)="selectProperty(property.id)" class="img img-2 d-flex justify-content-center align-items-center" [style.background-image]="'url(' + property.imgURL + ')'">
+    				<div class="properties" [style.overflow]="'hidden'">
+    					<div (click)="selectProperty(property.id)" class="img img-2 d-flex justify-content-center align-items-center hvr-grow" [style.background-image]="'url(' + property.imgURL + ')'">
     						<div class="icon d-flex justify-content-center align-items-center">
     							<span class="icon-search2"></span>
     						</div>
@@ -30,22 +29,7 @@
     					</div>
     				</div>
     			</div>
-
     		</div>
-    		<div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    		<app-abenwood-pager></app-abenwood-pager>
     	</div>
     </section>
