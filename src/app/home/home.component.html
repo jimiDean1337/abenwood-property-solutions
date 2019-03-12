@@ -4,8 +4,7 @@
     [carouselClasses]="['owl-theme', 'home-slider', 'owl-carousel']"
     [options]="heroOptions"
   >
-    <div class="item" *ngFor="let image of heroImages; let i = index;">
-      <div class="slider-item" [style.background-image]="'url(' + image.url + ')'">
+      <div class="slider-item item" *ngFor="let image of heroImages; let i = index;" [style.background-image]="'url(' + image.url + ')'">
         <div class="overlay"></div>
         <div class="container-fluid">
           <div
@@ -13,28 +12,26 @@
           >
             <div class="col-sm-12">
                 <button class="btn btn-custom p-3 px-4 bg-primary animated" (click)="image.toggleDetails()" [ngClass]="(image.showDetails === 'fadeOutUp') ? 'fadeInRight':'fadeOutRight'"
-                  >View Details <span class="icon-plus ml-1"></span
+                  >View Details <span class="icon icon-plus ml-1"></span
                 ></button>
             </div>
-            <div class="col-sm-12 text p-5 px-4 animated" [ngClass]="image.showDetails">
-              <div class="text-right mt-lg-4">
-                <button class="btn btn-sm animated" (click)="image.toggleDetails()">
-                  <span class="icon-close px-4"></span>
-                </button>
-              </div>
-              <h1 class="mb-3">{{image.data?.address?.street}}</h1>
-              <span class="location d-block mb-3"
-                ><i class="icon-my_location"></i>{{image.data?.address?.location}}</span
-              >
+            <div class="col-md-7 text col-sm-12 p-md-5 heading-section text-center border-bottom-primary animated" [ngClass]="image.showDetails">
+              <h2 class="mt-4 mb-4">{{image.data?.address?.street}}</h2>
+              <span class="subheading"><i class="icon icon-my_location font-weight-bold"></i>&nbsp;{{image.data?.address?.location}}</span>
               <p>
                 {{image.data?.caption}}
               </p>
               <span class="price">{{image.data?.price}}</span>
+              <div class="text-center mt-1 mb-1">
+                <button class="btn btn-sm btn-primary pl-3 pr-3" (click)="image.toggleDetails()">
+                  <span class="icon icon-remove"> Close</span>
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
-    </div>
   </owl-carousel>
 </section>
 <app-abenwood-search></app-abenwood-search>
