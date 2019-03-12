@@ -1,18 +1,35 @@
 Navigation:
   ❑ fix broken links @high
-  ❑ scroll to top button
+  ✔ scroll to top button @done (19-03-06 02:47)
 
 Navbar:
-  ❑ toggle closes on screen resize @high
+  ✔ toggle closes on screen resize @high @done (19-03-06 02:48)
   ❑ aos breakpoints to change scrolled trigger offset @high
-  ❑ link text darker color
+  ✔ link text darker color @done (19-03-06 02:48)
+
+Services:
+  ❑ Auth
+  ❑ User
+  ❑ Search
+  ❑ Property
+  ❑ Blog
+  ❑ Map
+  ❑ Newsletter
 
 Components:
   HighLevel(parent):
     ❑ Auth @high
+      ❑ UI: login card with form
+      ❑ Auth service for authentication
+      ❑ User service for data storage
     ❑ Search @high
+      ❑ UI: search input and results
+      ❑ Search service for query and results
+        ❑ MLS API
+        ❑ Abenwood db
     ❑ Google Maps @high
     ❑ Tags
+    ✔ Newsletter @done (19-03-06 02:57)
     ✔ Home @done (19-03-03 21:25)
     ✔ Properties @done (19-03-03 21:25)
     ✔ Blog @done (19-03-03 21:24)
